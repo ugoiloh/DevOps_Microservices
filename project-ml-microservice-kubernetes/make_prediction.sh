@@ -4,7 +4,7 @@ PORT=8000
 echo "Port: $PORT"
 
 # POST method predict
-curl -d '{  
+curl -v -d '{  
    "CHAS":{  
       "0":0
    },
@@ -24,5 +24,5 @@ curl -d '{
       "0":4.98
    }
 }'\
-     -H "Content-Type: application/json" \
-     -X POST http://localhost:$PORT/predict
+    -H "Content-Type: application/json" \
+    -X POST http://localhost:$PORT/predict
