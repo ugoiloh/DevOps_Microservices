@@ -9,13 +9,11 @@ jobs:
       # Use the same Docker base as the project
       - image: python:3.7.3-stretch
 
-    working_directory: ~/DevOps_Microservices
+    working_directory: ~/repo
 
     steps:
       - checkout
-      #- run: git submodule sync
-      #- run: git submodule update --init
-
+      
       # Download and cache dependencies
       - restore_cache:
           keys:
